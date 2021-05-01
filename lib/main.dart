@@ -44,7 +44,8 @@ class Passless extends StatelessWidget {
                   onTap: () {}),
               Divider(),
               ListTile(
-                  title: Text("Logout", style: TextStyle(color: Colors.redAccent),),
+                  title: Text(
+                    "Logout", style: TextStyle(color: Colors.redAccent),),
                   leading: Icon(Icons.logout, color: Colors.redAccent,),
                   onTap: () {}),
             ],
@@ -60,20 +61,22 @@ class Passless extends StatelessWidget {
                     child: Icon(Icons.lock, size: 150, color: blue_primary)),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(25, 30, 0, 0),
+                padding: EdgeInsets.fromLTRB(16, 32, 16, 0),
                 child: Container(
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "30 Day login history:",
-                      style: TextStyle(fontSize: 25),
+                      "Login history (30 days):",
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontFamily: 'Raleway'),
                     ),
                   ),
                 ),
               ),
               Container(
                 height: 315,
-                margin: EdgeInsets.fromLTRB(40, 20, 40, 10),
+                margin: EdgeInsets.fromLTRB(16, 20, 16, 10),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   border: Border.all(color: Colors.grey, width: 1.5),
@@ -81,13 +84,13 @@ class Passless extends StatelessWidget {
                 ),
                 child: ListView(
                   children: <Widget>[
-                    CustomCard(title: "Youtube",date: "16.4.2021"),
-                    CustomCard(title: "Amazon",date: "15.4.2021"),
-                    CustomCard(title: "Twitch",date: "10.4.2021"),
-                    CustomCard(title: "Facebook",date: "5.4.2021"),
-                    CustomCard(title: "Pinterest",date: "30.3.2021"),
-                    CustomCard(title: "Amazon",date: "29.3.2021"),
-                    CustomCard(title: "OnlyFans",date: "18.3.2021"),
+                    CustomCard(title: "Youtube", date: "16.4.2021"),
+                    CustomCard(title: "Amazon", date: "15.4.2021"),
+                    CustomCard(title: "Twitch", date: "10.4.2021"),
+                    CustomCard(title: "Facebook", date: "5.4.2021"),
+                    CustomCard(title: "Pinterest", date: "30.3.2021"),
+                    CustomCard(title: "Amazon", date: "29.3.2021"),
+                    CustomCard(title: "OnlyFans", date: "18.3.2021"),
                   ],
                 ),
               ),
@@ -95,7 +98,7 @@ class Passless extends StatelessWidget {
           ),
         ),
         floatingActionButton: Padding(
-          padding: EdgeInsets.fromLTRB(0, 0, 10, 10),
+          padding: EdgeInsets.fromLTRB(0, 0, 8, 8),
           child: FloatingActionButton(
             backgroundColor: blue_button,
             onPressed: () {},
@@ -118,14 +121,14 @@ class CustomCard extends Card {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10)
+          borderRadius: BorderRadius.circular(10)
       ),
       child: ListTile(
         title: Text(title),
         subtitle: Text(date),
         trailing: Container(
-            child: Icon(Icons.more_vert),
-      ),
+          child: Icon(Icons.more_vert),
+        ),
       ),
     );
   }
